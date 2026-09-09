@@ -4,9 +4,10 @@
 
 ## 브랜치
 
-- `main`: 초기 기획 기준선.
+- `main`: 초기 기획에서 시작했으며 2026-09-10에 로컬 MVP와 모델별 파이프라인 기준선을 반영했다.
 - `codex/mimamori-mvp`: 이번 구현과 테스트. 커밋은 검토 가능한 기능 단위로 남긴다.
 - 이후 실제 작업 시 `codex/incident-drill`, `codex/aws-pilot` 같은 브랜치를 생성한다. 존재하지 않는 PR·리뷰·팀원을 완료로 적지 않는다.
+- 모델별 작업의 현재 브랜치·워크트리·작업 ID는 원본 프로젝트 `docs/pipeline/registry.json`에서 확인한다.
 - feature → PR → CI → 사용자 리뷰 → main → 승인된 배포. 현재 로컬 저장소이며 원격 PR·보호 규칙은 아직 없다.
 
 ## Definition of Done
