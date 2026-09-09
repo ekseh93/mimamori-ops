@@ -23,6 +23,8 @@ python -m mimamori estimate --targets 5 --interval 5
 
 デモは固定時刻・架空の監視結果による障害訓練です。ネットワーク通信やメール送信は行いません。
 
+2026-09-10のローカル検証: Pythonテスト30件、Terraformモックテスト3件、Lint、Terraform validate、Lambdaパッケージ生成が成功。AWSモック・リリースの全テストには `requirements-dev.txt` が必要です。標準ライブラリだけの実行では該当テストがskipされます。
+
 実サイトの確認は自分が所有するか監視許可を得たHTTPS URLだけを設定してください。
 
 ```powershell
