@@ -55,5 +55,6 @@ flowchart LR
 - [SAA 학습·일본어 면접 연습](docs/04-learning-interview.ko.md)
 - [협업 방식·백로그](docs/05-collaboration.ko.md)
 - [검증 결과와 미확인 사항](docs/06-evidence.ko.md)
+- [Sol·Luna 개발 파이프라인](docs/07-model-pipeline.ko.md)
 
 AWS 무료 사용 가능 여부는 계정 생성 시점, 플랜, 계정 전체 사용량, 리전에 따라 달라집니다. 무료 운용을 보장하지 않습니다. AWS 생성·변경과 외부 공개는 대상과 비용을 확인한 뒤 별도 진행합니다.
