@@ -1,0 +1,7 @@
+# Replace only with owned/authorized targets. This example does not enable monitoring.
+targets = { owned-site = "https://example.com/" }
+monitoring_enabled = false
+enable_email_notifications = false
+# notification_email = ""  # approval required before sending a subscription request
+# github_oidc_provider_arn = "arn:aws:iam::ACCOUNT_ID:oidc-provider/token.actions.githubusercontent.com"
+# github_oidc_subject = "repo:OWNER@OWNER_ID/REPO@REPO_ID:environment:aws-learning"
