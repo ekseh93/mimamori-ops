@@ -1,0 +1,33 @@
+name: Bug report / 不具合
+description: Report an observed defect with a safe reproduction.
+title: '[Bug] '
+labels: ['type:bug', 'status:triage']
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior / 期待と実際
+      description: State observed facts; avoid guessing the root cause.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction / 再現手順
+      description: Include the relevant commit, command, and anonymized output.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Environment / 証跡の種類
+      options: ['Local', 'AWS mock', 'GitHub CI', 'Real AWS (authorized)']
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public content
+      options:
+        - label: I removed credentials, private URLs and personal information.
+          required: true

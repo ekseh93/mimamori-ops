@@ -1,0 +1,29 @@
+name: Feature or learning task / 改善・学習
+description: Define one small outcome and acceptance criteria.
+title: '[Task] '
+labels: ['type:feature', 'status:triage']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 解決したいこと
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria / 完了条件
+      description: Use measurable behavior or verifiable learning evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and exclusions / 範囲
+    validations:
+      required: true
+  - type: textarea
+    id: operations
+    attributes:
+      label: Cost, security and AWS impact / 運用への影響
+      description: Mark actual AWS changes separately from local work.

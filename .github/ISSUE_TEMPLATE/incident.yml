@@ -1,0 +1,29 @@
+name: Incident or drill / 障害・訓練
+description: Record the timeline and distinguish a drill from a real incident.
+title: '[Incident] '
+labels: ['type:incident', 'status:triage']
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Evidence type
+      options: ['Simulated drill', 'Actual authorized observation']
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline and impact / 時系列と影響
+      description: Include timezone, detection, confirmed facts and unknowns.
+    validations:
+      required: true
+  - type: textarea
+    id: response
+    attributes:
+      label: Actions and verification / 対応と確認
+    validations:
+      required: true
+  - type: textarea
+    id: followup
+    attributes:
+      label: Follow-up / 再発防止・学習

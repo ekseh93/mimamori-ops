@@ -1,0 +1,38 @@
+name: PR policy
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  readiness:
+    name: PR readiness
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            if (pr.user.login === 'dependabot[bot]') {
+              core.info('Dependency update: normal CI and security review still required.');
+              return;
+            }
+            const body = pr.body || '';
+            const match = body.match(/(?:closes|fixes|resolves)\s+#(\d+)\b/i);
+            if (!match) {
+              core.setFailed('Link a repository Issue using Closes #123.');
+              return;
+            }
+            const {data: issue} = await github.rest.issues.get({
+              ...context.repo, issue_number: Number(match[1])
+            });
+            if (issue.pull_request) core.setFailed('The linked item must be an Issue, not another PR.');
+            for (const heading of ['## Problem and behavior', '## Evidence', '## Operations']) {
+              if (!body.includes(heading)) core.setFailed(`Add the PR template section: ${heading}`);
+            }
+            core.info('Issue link and PR sections checked. This is not a human review approval.');
