@@ -15,4 +15,5 @@ data/
 .env*
 !*.example
 artifacts/local/
-
+docs/pipeline/registry.json
+.codex-local/

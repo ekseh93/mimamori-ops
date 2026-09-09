@@ -32,9 +32,7 @@ flowchart LR
 
 실제 작업 ID·경로는 원본 프로젝트의 `docs/pipeline/registry.json`을 읽는다. 다른 작업의 대화가 자동 공유된다고 가정하지 않는다. 작업 간 명시적 메시지와 커밋에 들어 있는 인계 문서를 사용한다.
 
-원본 프로젝트: `<local-only>`
-
-원본 총괄 작업 ID: `<local-only>`
+원본 프로젝트 경로와 총괄 작업 ID는 로컬 전용 `docs/pipeline/registry.json`에 보관한다. 이 파일은 Git 추적과 공개 대상에서 제외한다.
 
 ## 비용·맥락 낭비를 줄이는 운용
 
