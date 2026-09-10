@@ -2,7 +2,10 @@
 
 日本の小規模企業・Web制作会社向けに、Webサイトの監視結果と障害の引継ぎ情報を日本語でまとめる個人学習プロジェクトです。
 
-**状態:** ローカル実装・検証段階。AWSへのデプロイ、GitHub Actionsの実行、顧客利用、売上、実務経験の実績はありません。コード・文書の作成にAIを利用しています。
+**状態:** 公開リポジトリでCI・PRによる検証を整備中。AWSへのデプロイ、顧客利用、売上、実務経験の実績はありません。コード・文書の作成にAIを利用しています。
+
+[![CI](https://github.com/ekseh93/mimamori-ops/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ekseh93/mimamori-ops/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/ekseh93/mimamori-ops/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/ekseh93/mimamori-ops/actions/workflows/codeql.yml)
 
 ## 目的
 
@@ -56,5 +59,7 @@ flowchart LR
 - [협업 방식·백로그](docs/05-collaboration.ko.md)
 - [검증 결과와 미확인 사항](docs/06-evidence.ko.md)
 - [Sol·Luna 개발 파이프라인](docs/07-model-pipeline.ko.md)
+- [GitHub 협업 순서·화면 안내](docs/08-github-collaboration.ko.md)
+- [Contributing](CONTRIBUTING.md) / [Security policy](SECURITY.md)
 
 AWS 무료 사용 가능 여부는 계정 생성 시점, 플랜, 계정 전체 사용량, 리전에 따라 달라집니다. 무료 운용을 보장하지 않습니다. AWS 생성·변경과 외부 공개는 대상과 비용을 확인한 뒤 별도 진행합니다.
